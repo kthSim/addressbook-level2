@@ -9,14 +9,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 import seedu.addressbook.data.AddressBook;
-import seedu.addressbook.data.exception.IllegalValueException;
 import seedu.addressbook.data.person.Address;
 import seedu.addressbook.data.person.Email;
 import seedu.addressbook.data.person.Name;
 import seedu.addressbook.data.person.Person;
 import seedu.addressbook.data.person.Phone;
 import seedu.addressbook.data.person.ReadOnlyPerson;
-import seedu.addressbook.data.person.UniquePersonList.PersonNotFoundException;
 import seedu.addressbook.util.TestUtil;
 
 public class SortCommandTest {
@@ -25,6 +23,10 @@ public class SortCommandTest {
     private AddressBook emptyTestBook;
 
     private List<ReadOnlyPerson> populatedList;
+    private List<ReadOnlyPerson> expectedNameSortedList;
+    private List<ReadOnlyPerson> expectedPhoneSortedList;
+    private List<ReadOnlyPerson> expectedEmailSortedList;
+    private List<ReadOnlyPerson> expectedAddressSortedList;
 
     @Before
     public void setUp() throws Exception {
@@ -41,30 +43,37 @@ public class SortCommandTest {
         testBook = TestUtil.createAddressBook(johnDoe, janeDoe, davidGrant, samDoe);
         emptyTestBook = TestUtil.createAddressBook();
 
-//        emptyDisplayList = TestUtil.createList();
-//
         populatedList = TestUtil.createList(johnDoe, janeDoe, davidGrant, samDoe);
-//        listWithSurnameDoe = TestUtil.createList(johnDoe, janeDoe, samDoe);
+        expectedNameSortedList = TestUtil.createList(davidGrant, janeDoe, johnDoe, samDoe);
+        expectedPhoneSortedList = TestUtil.createList(johnDoe, davidGrant, samDoe, janeDoe);
+        expectedEmailSortedList = TestUtil.createList(janeDoe, davidGrant, johnDoe, samDoe);
+        expectedAddressSortedList = TestUtil.createList(johnDoe, janeDoe, davidGrant, samDoe);
+
     }
 
     @Test
     public void execute_sortAddressBookByName_returnsNameSorted() {
         assetSortCommandOutput("name");
+        assertEquals(expectedNameSortedList.toString(), testBook.getAllPersons().immutableListView().toString());
+//        System.out.println(testBook.getAllPersons().immutableListView().toString());
     }
 
     @Test
     public void execute_sortAddressBookByPhone_returnsPhoneSorted() {
         assetSortCommandOutput("phone");
+        assertEquals(expectedPhoneSortedList.toString(), testBook.getAllPersons().immutableListView().toString());
     }
 
     @Test
     public void execute_sortAddressBookByEmail_returnsEmailSorted() {
         assetSortCommandOutput("email");
+        assertEquals(expectedEmailSortedList.toString(), testBook.getAllPersons().immutableListView().toString());
     }
 
     @Test
     public void execute_sortAddressBookByAddress_returnsAddressSorted() {
         assetSortCommandOutput("address");
+        assertEquals(expectedAddressSortedList.toString(), testBook.getAllPersons().immutableListView().toString());
     }
 
     private void assetSortCommandOutput(String sortParameter) {
