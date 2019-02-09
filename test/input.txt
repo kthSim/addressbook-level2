@@ -149,6 +149,32 @@
   list
 
 ##########################################################
+# test sort command
+##########################################################
+
+  # populate sample data
+  add David Grant p/61121122 e/david@grant.com a/44H Define Road
+  add Jane Doe p/91234567 e/bestJane@doe.com a/43G Hom Road
+  add John Doe Phone: 61034567 e/doeJohn@doe.com a/395C Ben Road
+  add Sam Doe Phone: 63345566 e/sam@doe.com a/55G Abc Road
+
+  # catch invalid command formats
+  sort
+  sort chaos
+
+  # sort by name
+  sort name
+  # sort by phone
+  sort phone
+  # sort by email
+  sort email
+  # sort by address
+  sort address
+
+  # clears all
+  clear
+
+##########################################################
 # test exit command
 ##########################################################
 

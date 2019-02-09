@@ -55,7 +55,6 @@ public class SortCommandTest {
     public void execute_sortAddressBookByName_returnsNameSorted() {
         assetSortCommandOutput("name");
         assertEquals(expectedNameSortedList.toString(), testBook.getAllPersons().immutableListView().toString());
-//        System.out.println(testBook.getAllPersons().immutableListView().toString());
     }
 
     @Test

@@ -300,6 +300,51 @@
 || 
 || 0 persons listed!
 || ===================================================
+|| Enter command: || [Command entered:  add David Grant p/61121122 e/david@grant.com a/44H Define Road]
+|| New person added: David Grant Phone: 61121122 Email: david@grant.com Address: 44H Define Road Tags: 
+|| ===================================================
+|| Enter command: || [Command entered:  add Jane Doe p/91234567 e/bestJane@doe.com a/43G Hom Road]
+|| New person added: Jane Doe Phone: 91234567 Email: bestJane@doe.com Address: 43G Hom Road Tags: 
+|| ===================================================
+|| Enter command: || [Command entered:  add John Doe Phone: 61034567 e/doeJohn@doe.com a/395C Ben Road]
+|| Invalid command format! 
+|| add: Adds a person to the address book. Contact details can be marked private by prepending 'p' to the prefix.
+|| Parameters: NAME [p]p/PHONE [p]e/EMAIL [p]a/ADDRESS  [t/TAG]...
+|| Example: add John Doe p/98765432 e/johnd@gmail.com a/311, Clementi Ave 2, #02-25 t/friends t/owesMoney
+|| ===================================================
+|| Enter command: || [Command entered:  add Sam Doe Phone: 63345566 e/sam@doe.com a/55G Abc Road]
+|| Invalid command format! 
+|| add: Adds a person to the address book. Contact details can be marked private by prepending 'p' to the prefix.
+|| Parameters: NAME [p]p/PHONE [p]e/EMAIL [p]a/ADDRESS  [t/TAG]...
+|| Example: add John Doe p/98765432 e/johnd@gmail.com a/311, Clementi Ave 2, #02-25 t/friends t/owesMoney
+|| ===================================================
+|| Enter command: || [Command entered:  sort]
+|| Invalid command format! 
+|| sort: Sorts address book via the selected parameter.
+|| Parameters: [name] OR [phone] OR [email] OR [address]
+|| Example: sort name
+|| ===================================================
+|| Enter command: || [Command entered:  sort chaos]
+|| Invalid command format! 
+|| sort: Sorts address book via the selected parameter.
+|| Parameters: [name] OR [phone] OR [email] OR [address]
+|| Example: sort name
+|| ===================================================
+|| Enter command: || [Command entered:  sort name]
+|| List has been sorted by name
+|| ===================================================
+|| Enter command: || [Command entered:  sort phone]
+|| List has been sorted by phone
+|| ===================================================
+|| Enter command: || [Command entered:  sort email]
+|| List has been sorted by email
+|| ===================================================
+|| Enter command: || [Command entered:  sort address]
+|| List has been sorted by address
+|| ===================================================
+|| Enter command: || [Command entered:  clear]
+|| Address book has been cleared!
+|| ===================================================
 || Enter command: || [Command entered:  exit]
 || Exiting Address Book as requested ...
 || ===================================================
