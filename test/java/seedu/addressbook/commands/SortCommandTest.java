@@ -28,6 +28,11 @@ public class SortCommandTest {
     private List<ReadOnlyPerson> expectedEmailSortedList;
     private List<ReadOnlyPerson> expectedAddressSortedList;
 
+    /**
+     * Sets up a sample addressBook containing four unique Persons that will result in a different list order
+     * depending on the selected sort parameter.
+     *
+     */
     @Before
     public void setUp() throws Exception {
         Person johnDoe = new Person(new Name("John Doe"), new Phone("61034567", false),
@@ -51,30 +56,47 @@ public class SortCommandTest {
 
     }
 
+    /**
+     * Tests sorting the address book by name
+     */
     @Test
     public void execute_sortAddressBookByName_returnsNameSorted() {
         assetSortCommandOutput("name");
         assertEquals(expectedNameSortedList.toString(), testBook.getAllPersons().immutableListView().toString());
     }
 
+    /**
+     * Tests sorting the address book by phone
+     */
     @Test
     public void execute_sortAddressBookByPhone_returnsPhoneSorted() {
         assetSortCommandOutput("phone");
         assertEquals(expectedPhoneSortedList.toString(), testBook.getAllPersons().immutableListView().toString());
     }
 
+    /**
+     * Tests sorting the address book by email
+     */
     @Test
     public void execute_sortAddressBookByEmail_returnsEmailSorted() {
         assetSortCommandOutput("email");
         assertEquals(expectedEmailSortedList.toString(), testBook.getAllPersons().immutableListView().toString());
     }
 
+    /**
+     * Tests sorting the address book by address
+     */
     @Test
     public void execute_sortAddressBookByAddress_returnsAddressSorted() {
         assetSortCommandOutput("address");
         assertEquals(expectedAddressSortedList.toString(), testBook.getAllPersons().immutableListView().toString());
     }
 
+    /**
+     * Utility function to compare expected sort result by actual sort result.
+     *
+     * @param sortParameter Parameter to sort by
+     */
     private void assetSortCommandOutput(String sortParameter) {
         Command testCmd = new SortCommand(sortParameter);
         testCmd.setData(testBook, populatedList);
