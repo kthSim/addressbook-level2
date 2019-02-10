@@ -306,17 +306,11 @@
 || Enter command: || [Command entered:  add Jane Doe p/91234567 e/bestJane@doe.com a/43G Hom Road]
 || New person added: Jane Doe Phone: 91234567 Email: bestJane@doe.com Address: 43G Hom Road Tags: 
 || ===================================================
-|| Enter command: || [Command entered:  add John Doe Phone: 61034567 e/doeJohn@doe.com a/395C Ben Road]
-|| Invalid command format! 
-|| add: Adds a person to the address book. Contact details can be marked private by prepending 'p' to the prefix.
-|| Parameters: NAME [p]p/PHONE [p]e/EMAIL [p]a/ADDRESS  [t/TAG]...
-|| Example: add John Doe p/98765432 e/johnd@gmail.com a/311, Clementi Ave 2, #02-25 t/friends t/owesMoney
+|| Enter command: || [Command entered:  add John Doe p/61034567 e/doeJohn@doe.com a/395C Ben Road]
+|| New person added: John Doe Phone: 61034567 Email: doeJohn@doe.com Address: 395C Ben Road Tags: 
 || ===================================================
-|| Enter command: || [Command entered:  add Sam Doe Phone: 63345566 e/sam@doe.com a/55G Abc Road]
-|| Invalid command format! 
-|| add: Adds a person to the address book. Contact details can be marked private by prepending 'p' to the prefix.
-|| Parameters: NAME [p]p/PHONE [p]e/EMAIL [p]a/ADDRESS  [t/TAG]...
-|| Example: add John Doe p/98765432 e/johnd@gmail.com a/311, Clementi Ave 2, #02-25 t/friends t/owesMoney
+|| Enter command: || [Command entered:  add Sam Doe p/63345566 e/sam@doe.com a/55G Abc Road]
+|| New person added: Sam Doe Phone: 63345566 Email: sam@doe.com Address: 55G Abc Road Tags: 
 || ===================================================
 || Enter command: || [Command entered:  sort]
 || Invalid command format! 
@@ -331,15 +325,35 @@
 || Example: sort name
 || ===================================================
 || Enter command: || [Command entered:  sort name]
+|| 	1. David Grant Phone: 61121122 Email: david@grant.com Address: 44H Define Road Tags: 
+|| 	2. Jane Doe Phone: 91234567 Email: bestJane@doe.com Address: 43G Hom Road Tags: 
+|| 	3. John Doe Phone: 61034567 Email: doeJohn@doe.com Address: 395C Ben Road Tags: 
+|| 	4. Sam Doe Phone: 63345566 Email: sam@doe.com Address: 55G Abc Road Tags: 
+|| 
 || List has been sorted by name
 || ===================================================
 || Enter command: || [Command entered:  sort phone]
+|| 	1. John Doe Phone: 61034567 Email: doeJohn@doe.com Address: 395C Ben Road Tags: 
+|| 	2. David Grant Phone: 61121122 Email: david@grant.com Address: 44H Define Road Tags: 
+|| 	3. Sam Doe Phone: 63345566 Email: sam@doe.com Address: 55G Abc Road Tags: 
+|| 	4. Jane Doe Phone: 91234567 Email: bestJane@doe.com Address: 43G Hom Road Tags: 
+|| 
 || List has been sorted by phone
 || ===================================================
 || Enter command: || [Command entered:  sort email]
+|| 	1. Jane Doe Phone: 91234567 Email: bestJane@doe.com Address: 43G Hom Road Tags: 
+|| 	2. David Grant Phone: 61121122 Email: david@grant.com Address: 44H Define Road Tags: 
+|| 	3. John Doe Phone: 61034567 Email: doeJohn@doe.com Address: 395C Ben Road Tags: 
+|| 	4. Sam Doe Phone: 63345566 Email: sam@doe.com Address: 55G Abc Road Tags: 
+|| 
 || List has been sorted by email
 || ===================================================
 || Enter command: || [Command entered:  sort address]
+|| 	1. John Doe Phone: 61034567 Email: doeJohn@doe.com Address: 395C Ben Road Tags: 
+|| 	2. Jane Doe Phone: 91234567 Email: bestJane@doe.com Address: 43G Hom Road Tags: 
+|| 	3. David Grant Phone: 61121122 Email: david@grant.com Address: 44H Define Road Tags: 
+|| 	4. Sam Doe Phone: 63345566 Email: sam@doe.com Address: 55G Abc Road Tags: 
+|| 
 || List has been sorted by address
 || ===================================================
 || Enter command: || [Command entered:  clear]

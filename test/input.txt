@@ -155,8 +155,8 @@
   # populate sample data
   add David Grant p/61121122 e/david@grant.com a/44H Define Road
   add Jane Doe p/91234567 e/bestJane@doe.com a/43G Hom Road
-  add John Doe Phone: 61034567 e/doeJohn@doe.com a/395C Ben Road
-  add Sam Doe Phone: 63345566 e/sam@doe.com a/55G Abc Road
+  add John Doe p/61034567 e/doeJohn@doe.com a/395C Ben Road
+  add Sam Doe p/63345566 e/sam@doe.com a/55G Abc Road
 
   # catch invalid command formats
   sort
